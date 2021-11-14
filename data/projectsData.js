@@ -1,20 +1,20 @@
 const projectsData = [
-  {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
-  },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten handphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
-  },
-]
+	{
+		title: "Quoter",
+		description:
+			"A Discord bot which stores quotes for servers & retrieves them on demand. It supports listing, (randomly) displaying, deleting, and editing quotes!",
+		imgSrc: "/static/images/quoter.png",
+		href: "https://github.com/nchristopher/quoter",
+		link: "Source code",
+	},
+	{
+		title: "My Blog",
+		description:
+			"The website you're currently on! It's my personal site & blog, built with Next.js, Tailwind CSS, and MDX. ",
+		imgSrc: "/static/images/website.png",
+		href: "https://github.com/nchristopher/blog",
+		link: "Source code",
+	},
+];
 
-export default projectsData
+export default projectsData;
