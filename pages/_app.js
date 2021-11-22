@@ -8,6 +8,7 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import { ClientReload } from "@/components/ClientReload";
 
 const isDevelopment = process.env.NODE_ENV === "development";
+const isSocket = process.env.SOCKET;
 
 export default function App({ Component, pageProps }) {
 	return (
@@ -18,7 +19,7 @@ export default function App({ Component, pageProps }) {
 					name="viewport"
 				/>
 			</Head>
-			{isDevelopment && <ClientReload />}
+			{isDevelopment && isSocket && <ClientReload />}
 			<LayoutWrapper>
 				<Component {...pageProps} />
 			</LayoutWrapper>
