@@ -23,7 +23,9 @@ export const SEO = ({ title, description, type = "website", images = [] }) => {
 					<meta property="og:image" content={url} key={url} />
 				))}
 
-			{images.length && <meta name="twitter:image" content={images[0]} />}
+			{images.length && (
+				<meta name="twitter:image" content={images[0]?.url} />
+			)}
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content={siteMetadata.twitter} />
 			<meta name="twitter:title" content={title} />
