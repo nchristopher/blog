@@ -3,6 +3,7 @@ import PageTitle from "@/components/PageTitle";
 import SectionContainer from "@/components/SectionContainer";
 import { BlogSEO } from "@/components/SEO";
 import siteMetadata from "@/data/siteMetadata";
+import Comments from "@/components/comments";
 import formatDate from "@/lib/utils/formatDate";
 import ScrollTop from "@/components/ScrollTop";
 
@@ -43,6 +44,7 @@ export default function PostLayout({ frontMatter, next, prev, children }) {
 								{children}
 							</div>
 						</div>
+						<Comments frontMatter={frontMatter} />
 						<footer>
 							<div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
 								{prev && (
