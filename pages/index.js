@@ -1,6 +1,7 @@
 import Link from "@/components/Link";
 import { SEO } from "@/components/SEO";
 import Tag from "@/components/Tag";
+import NewsletterForm from "@/components/NewsletterForm";
 import siteMetadata from "@/data/siteMetadata";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
 import formatDate from "@/lib/utils/formatDate";
@@ -108,6 +109,10 @@ export default function Home({ posts }) {
 					</Link>
 				</div>
 			)}
+
+			<div className="flex items-center justify-center pt-4">
+				<NewsletterForm />
+			</div>
 		</>
 	);
 }
