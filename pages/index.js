@@ -5,7 +5,7 @@ import siteMetadata from "@/data/siteMetadata";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
 import formatDate from "@/lib/utils/formatDate";
 
-const MAX_DISPLAY = 5;
+const MAX_DISPLAY = 3;
 
 export async function getStaticProps() {
 	const posts = await getAllFilesFrontMatter("blog");
