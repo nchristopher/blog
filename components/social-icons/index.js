@@ -3,6 +3,11 @@ import GitHub from "./github.svg";
 import YouTube from "./youtube.svg";
 import LinkedIn from "./linkedin.svg";
 import Twitter from "./twitter.svg";
+import Dev from "./devdotto.svg";
+import Mastodon from "./mastodon.svg";
+import Steam from "./steam.svg";
+import TikTok from "./tiktok.svg";
+import Reddit from "./reddit.svg";
 
 // Icons taken from: https://simpleicons.org/
 
@@ -12,6 +17,11 @@ const components = {
 	youtube: YouTube,
 	linkedin: LinkedIn,
 	twitter: Twitter,
+	dev: Dev,
+	mastodon: Mastodon,
+	steam: Steam,
+	tiktok: TikTok,
+	reddit: Reddit,
 };
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

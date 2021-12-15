@@ -12,6 +12,11 @@ const siteMetadata = {
 	email: "nchristopher@tuta.io",
 	github: "https://github.com/nchristopher",
 	twitter: "https://twitter.com/nickhasoccured",
+	youtube: "https://youtube.com/NicholasChristopher123",
+	steam: "https://steamcommunity.com/id/nchristopher",
+	reddit: "https://reddit.com/u/nickhasoccured",
+	mastodon: "https://mastodon.online/web/@nchristopher",
+	tiktok: "https://www.tiktok.com/@nicholaschristopher",
 	locale: "en-US",
 	comment: {
 		// Select a provider and use the environment variables associated to it
