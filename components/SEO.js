@@ -12,10 +12,10 @@ export const SEO = ({ title, description, type = "website", images = [] }) => {
 
 			<meta
 				property="og:url"
-				content={`${metadata.siteUrl}${router.asPath}`}
+				content={`${metadata.url}${router.asPath}`}
 			/>
 			<meta property="og:type" content={type} />
-			<meta property="og:site_name" content={metadata.title} />
+			<meta property="og:site_name" content={metadata.name} />
 			<meta property="og:description" content={description} />
 			<meta property="og:title" content={title} />
 			{images.length &&
@@ -44,7 +44,7 @@ export const TagSEO = ({ title, description }) => {
 					rel="alternate"
 					type="application/rss+xml"
 					title={`${description} - RSS feed`}
-					href={`${metadata.siteUrl}${router.asPath}/feed.xml`}
+					href={`${metadata.url}${router.asPath}/feed.xml`}
 				/>
 			</Head>
 		</>
@@ -67,7 +67,7 @@ export const BlogSEO = ({
 	const featuredImages = images?.map((img) => {
 		return {
 			"@type": "ImageObject",
-			url: `${metadata.siteUrl}${img}`,
+			url: `${metadata.url}${img}`,
 		};
 	});
 
@@ -80,7 +80,7 @@ export const BlogSEO = ({
 		  })
 		: {
 				"@type": "Person",
-				name: metadata.author,
+				name: metadata.name,
 		  };
 
 	const structuredData = {
@@ -97,10 +97,10 @@ export const BlogSEO = ({
 		author: authorList,
 		publisher: {
 			"@type": "Organization",
-			name: metadata.author,
+			name: metadata.name,
 			logo: {
 				"@type": "ImageObject",
-				url: `${metadata.siteUrl}${metadata.siteLogo}`,
+				url: `${metadata.url}${metadata.siteLogo}`,
 			},
 		},
 		description: summary,
@@ -129,7 +129,7 @@ export const BlogSEO = ({
 				)}
 				<link
 					rel="canonical"
-					href={`${metadata.siteUrl}${router.asPath}`}
+					href={`${metadata.url}${router.asPath}`}
 				/>
 				<script
 					type="application/ld+json"

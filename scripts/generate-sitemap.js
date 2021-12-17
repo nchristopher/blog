@@ -36,7 +36,7 @@ const metadata = require("../data/metadata");
 					}
 					return `
                         <url>
-                            <loc>${metadata.siteUrl}${route}</loc>
+                            <loc>${metadata.url}${route}</loc>
                         </url>
                     `;
 				})

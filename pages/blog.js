@@ -20,7 +20,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
 	return (
 		<>
 			<SEO
-				title={`Blog - ${metadata.author}`}
+				title={`Blog - ${metadata.name}`}
 				description={metadata.description}
 			/>
 			<ListLayout

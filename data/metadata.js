@@ -1,23 +1,17 @@
 const metadata = {
-	title: "Nicholas Christopher",
-	author: "Nicholas Christopher",
-	headerTitle: "Nicholas Christopher",
+	name: "Nicholas Christopher",
+	url: "https://nchristopher.me",
 	description:
 		"I'm an intermediate JavaScript developer, currently working on my Discord bot, Quoter. I'm a big fan of privacy & open-source software so most of my projects reflect that!",
-	language: "en-us",
-	siteUrl: "https://nchristopher.me",
-	siteLogo: "/static/images/logo.png",
-	image: "/static/images/avatar.png",
-	socialBanner: "/static/images/twitter-card.png",
+	language: "en-US",
 	email: "nchristopher@tuta.io",
-	github: "https://github.com/nchristopher",
 	twitter: "https://twitter.com/nickhasoccured",
+	github: "https://github.com/nchristopher",
 	youtube: "https://youtube.com/NicholasChristopher123",
 	steam: "https://steamcommunity.com/id/nchristopher",
 	reddit: "https://reddit.com/u/nickhasoccured",
 	mastodon: "https://mastodon.online/web/@nchristopher",
 	tiktok: "https://www.tiktok.com/@nicholaschristopher",
-	locale: "en-US",
 	comment: {
 		// Select a provider and use the environment variables associated to it
 		// https://vercel.com/docs/environment-variables

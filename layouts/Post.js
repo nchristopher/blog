@@ -13,7 +13,7 @@ export default function PostLayout({ frontMatter, next, prev, children }) {
 	return (
 		<SectionContainer>
 			<BlogSEO
-				url={`${metadata.siteUrl}/blog/${frontMatter.slug}`}
+				url={`${metadata.url}/blog/${frontMatter.slug}`}
 				{...frontMatter}
 			/>
 			<ScrollTop />

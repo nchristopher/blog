@@ -44,7 +44,7 @@ export async function getStaticProps(context) {
 export default function PostPage({ posts, initialDisplayPosts, pagination }) {
 	return (
 		<>
-			<SEO title={metadata.title} description={metadata.description} />
+			<SEO title={metadata.name} description={metadata.description} />
 			<ListLayout
 				posts={posts}
 				initialDisplayPosts={initialDisplayPosts}

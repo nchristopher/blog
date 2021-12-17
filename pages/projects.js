@@ -7,7 +7,7 @@ export default function Projects() {
 	return (
 		<>
 			<SEO
-				title={`Projects - ${metadata.author}`}
+				title={`Projects - ${metadata.name}`}
 				description={metadata.description}
 			/>
 			<div className="pt-6 pb-8 space-y-2 md:space-y-5">
