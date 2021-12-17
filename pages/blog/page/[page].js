@@ -1,5 +1,5 @@
 import { SEO } from "@/components/SEO";
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
 import ListLayout from "@/layouts/ListLayout";
 import { POSTS_PER_PAGE } from "../../blog";
@@ -44,10 +44,7 @@ export async function getStaticProps(context) {
 export default function PostPage({ posts, initialDisplayPosts, pagination }) {
 	return (
 		<>
-			<SEO
-				title={siteMetadata.title}
-				description={siteMetadata.description}
-			/>
+			<SEO title={metadata.title} description={metadata.description} />
 			<ListLayout
 				posts={posts}
 				initialDisplayPosts={initialDisplayPosts}

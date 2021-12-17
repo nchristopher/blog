@@ -1,4 +1,4 @@
-const siteMetadata = {
+const metadata = {
 	title: "Nicholas Christopher",
 	author: "Nicholas Christopher",
 	headerTitle: "Nicholas Christopher",
@@ -46,4 +46,4 @@ const siteMetadata = {
 	},
 };
 
-module.exports = siteMetadata;
+module.exports = metadata;

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 
 export const SEO = ({ title, description, type = "website", images = [] }) => {
 	const router = useRouter();
@@ -12,10 +12,10 @@ export const SEO = ({ title, description, type = "website", images = [] }) => {
 
 			<meta
 				property="og:url"
-				content={`${siteMetadata.siteUrl}${router.asPath}`}
+				content={`${metadata.siteUrl}${router.asPath}`}
 			/>
 			<meta property="og:type" content={type} />
-			<meta property="og:site_name" content={siteMetadata.title} />
+			<meta property="og:site_name" content={metadata.title} />
 			<meta property="og:description" content={description} />
 			<meta property="og:title" content={title} />
 			{images.length &&
@@ -27,7 +27,7 @@ export const SEO = ({ title, description, type = "website", images = [] }) => {
 				<meta name="twitter:image" content={images[0]?.url} />
 			)}
 			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:site" content={siteMetadata.twitter} />
+			<meta name="twitter:site" content={metadata.twitter} />
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={description} />
 		</Head>
@@ -44,7 +44,7 @@ export const TagSEO = ({ title, description }) => {
 					rel="alternate"
 					type="application/rss+xml"
 					title={`${description} - RSS feed`}
-					href={`${siteMetadata.siteUrl}${router.asPath}/feed.xml`}
+					href={`${metadata.siteUrl}${router.asPath}/feed.xml`}
 				/>
 			</Head>
 		</>
@@ -67,7 +67,7 @@ export const BlogSEO = ({
 	const featuredImages = images?.map((img) => {
 		return {
 			"@type": "ImageObject",
-			url: `${siteMetadata.siteUrl}${img}`,
+			url: `${metadata.siteUrl}${img}`,
 		};
 	});
 
@@ -80,7 +80,7 @@ export const BlogSEO = ({
 		  })
 		: {
 				"@type": "Person",
-				name: siteMetadata.author,
+				name: metadata.author,
 		  };
 
 	const structuredData = {
@@ -97,10 +97,10 @@ export const BlogSEO = ({
 		author: authorList,
 		publisher: {
 			"@type": "Organization",
-			name: siteMetadata.author,
+			name: metadata.author,
 			logo: {
 				"@type": "ImageObject",
-				url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
+				url: `${metadata.siteUrl}${metadata.siteLogo}`,
 			},
 		},
 		description: summary,
@@ -129,7 +129,7 @@ export const BlogSEO = ({
 				)}
 				<link
 					rel="canonical"
-					href={`${siteMetadata.siteUrl}${router.asPath}`}
+					href={`${metadata.siteUrl}${router.asPath}`}
 				/>
 				<script
 					type="application/ld+json"

@@ -1,5 +1,5 @@
 import { getAllFilesFrontMatter } from "@/lib/mdx";
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 import ListLayout from "@/layouts/ListLayout";
 import { SEO } from "@/components/SEO";
 
@@ -20,8 +20,8 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
 	return (
 		<>
 			<SEO
-				title={`Blog - ${siteMetadata.author}`}
-				description={siteMetadata.description}
+				title={`Blog - ${metadata.author}`}
+				description={metadata.description}
 			/>
 			<ListLayout
 				posts={posts}

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const globby = require("globby");
 const prettier = require("prettier");
-const siteMetadata = require("../data/siteMetadata");
+const metadata = require("../data/metadata");
 
 (async () => {
 	const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
@@ -36,7 +36,7 @@ const siteMetadata = require("../data/siteMetadata");
 					}
 					return `
                         <url>
-                            <loc>${siteMetadata.siteUrl}${route}</loc>
+                            <loc>${metadata.siteUrl}${route}</loc>
                         </url>
                     `;
 				})

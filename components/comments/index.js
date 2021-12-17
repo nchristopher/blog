@@ -1,4 +1,4 @@
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 import dynamic from "next/dynamic";
 
 const GiscusComponent = dynamic(
@@ -11,8 +11,8 @@ const GiscusComponent = dynamic(
 const Comments = ({ frontMatter }) => {
 	let term;
 	switch (
-		siteMetadata.comment.giscusConfig.mapping ||
-		siteMetadata.comment.utterancesConfig.issueTerm
+		metadata.comment.giscusConfig.mapping ||
+		metadata.comment.utterancesConfig.issueTerm
 	) {
 		case "pathname":
 			term = frontMatter.slug;
@@ -26,10 +26,9 @@ const Comments = ({ frontMatter }) => {
 	}
 	return (
 		<div id="comment">
-			{siteMetadata.comment &&
-				siteMetadata.comment.provider === "giscus" && (
-					<GiscusComponent mapping={term} />
-				)}
+			{metadata.comment && metadata.comment.provider === "giscus" && (
+				<GiscusComponent mapping={term} />
+			)}
 		</div>
 	);
 };

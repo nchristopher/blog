@@ -2,7 +2,7 @@ import Link from "@/components/Link";
 import { SEO } from "@/components/SEO";
 import Tag from "@/components/Tag";
 import NewsletterForm from "@/components/NewsletterForm";
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
 import formatDate from "@/lib/utils/formatDate";
 
@@ -17,10 +17,7 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
 	return (
 		<>
-			<SEO
-				title={siteMetadata.title}
-				description={siteMetadata.description}
-			/>
+			<SEO title={metadata.title} description={metadata.description} />
 			<div className="divide-y divide-gray-200 dark:divide-gray-700">
 				<div className="pt-6 pb-8 space-y-2 md:space-y-5">
 					<h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">

@@ -1,7 +1,7 @@
 import Link from "@/components/Link";
 import { SEO } from "@/components/SEO";
 import Tag from "@/components/Tag";
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 import { getAllTags } from "@/lib/tags";
 import kebabCase from "@/lib/utils/kebabCase";
 
@@ -16,7 +16,7 @@ export default function Tags({ tags }) {
 	return (
 		<>
 			<SEO
-				title={`Tags - ${siteMetadata.author}`}
+				title={`Tags - ${metadata.author}`}
 				description="Stuff I blog about."
 			/>
 			<div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">

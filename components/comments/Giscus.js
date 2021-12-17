@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useTheme } from "next-themes";
 
-import siteMetadata from "@/data/siteMetadata";
+import metadata from "@/data/metadata";
 
 const Giscus = ({ mapping }) => {
 	const [enableLoadComments, setEnabledLoadComments] = useState(true);
 	const { theme, resolvedTheme } = useTheme();
 	const commentsTheme =
-		siteMetadata.comment.giscusConfig.themeURL === ""
+		metadata.comment.giscusConfig.themeURL === ""
 			? theme === "dark" || resolvedTheme === "dark"
-				? siteMetadata.comment.giscusConfig.darkTheme
-				: siteMetadata.comment.giscusConfig.theme
-			: siteMetadata.comment.giscusConfig.themeURL;
+				? metadata.comment.giscusConfig.darkTheme
+				: metadata.comment.giscusConfig.theme
+			: metadata.comment.giscusConfig.themeURL;
 
 	const COMMENTS_ID = "comments-container";
 
@@ -19,30 +19,27 @@ const Giscus = ({ mapping }) => {
 		setEnabledLoadComments(false);
 		const script = document.createElement("script");
 		script.src = "https://giscus.app/client.js";
-		script.setAttribute(
-			"data-repo",
-			siteMetadata.comment.giscusConfig.repo
-		);
+		script.setAttribute("data-repo", metadata.comment.giscusConfig.repo);
 		script.setAttribute(
 			"data-repo-id",
-			siteMetadata.comment.giscusConfig.repositoryId
+			metadata.comment.giscusConfig.repositoryId
 		);
 		script.setAttribute(
 			"data-category",
-			siteMetadata.comment.giscusConfig.category
+			metadata.comment.giscusConfig.category
 		);
 		script.setAttribute(
 			"data-category-id",
-			siteMetadata.comment.giscusConfig.categoryId
+			metadata.comment.giscusConfig.categoryId
 		);
 		script.setAttribute("data-mapping", mapping);
 		script.setAttribute(
 			"data-reactions-enabled",
-			siteMetadata.comment.giscusConfig.reactions
+			metadata.comment.giscusConfig.reactions
 		);
 		script.setAttribute(
 			"data-emit-metadata",
-			siteMetadata.comment.giscusConfig.metadata
+			metadata.comment.giscusConfig.metadata
 		);
 		script.setAttribute("data-theme", commentsTheme);
 		script.setAttribute("crossorigin", "anonymous");
