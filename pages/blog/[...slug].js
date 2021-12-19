@@ -25,21 +25,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const allPosts = await getAllFilesFrontMatter("blog");
-	const postIndex = allPosts.findIndex(
-		(post) => formatSlug(post.slug) === params.slug.join("/")
-	);
-	const prev = allPosts[postIndex + 1] || null;
-	const next = allPosts[postIndex - 1] || null;
 	const post = await getFileBySlug("blog", params.slug.join("/"));
 
 	// rss
 	const rss = generateRss(allPosts);
 	fs.writeFileSync("./public/feed.xml", rss);
 
-	return { props: { post, prev, next } };
+	return { props: { post } };
 }
 
-export default function Blog({ post, prev, next }) {
+export default function Blog({ post }) {
 	const { mdxSource, toc, frontMatter } = post;
 
 	return (
@@ -50,8 +45,6 @@ export default function Blog({ post, prev, next }) {
 					toc={toc}
 					mdxSource={mdxSource}
 					frontMatter={frontMatter}
-					prev={prev}
-					next={next}
 				/>
 			) : (
 				<div className="mt-24 text-center">

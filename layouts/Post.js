@@ -1,4 +1,3 @@
-import Link from "@/components/Link";
 import PageTitle from "@/components/PageTitle";
 import SectionContainer from "@/components/SectionContainer";
 import { BlogSEO } from "@/components/SEO";
@@ -7,7 +6,7 @@ import Comments from "@/components/comments";
 import formatDate from "@/lib/utils/formatDate";
 import ScrollTop from "@/components/ScrollTop";
 
-export default function PostLayout({ frontMatter, next, prev, children }) {
+export default function PostLayout({ frontMatter, children }) {
 	const { date, title } = frontMatter;
 
 	return (
@@ -45,30 +44,6 @@ export default function PostLayout({ frontMatter, next, prev, children }) {
 							</div>
 						</div>
 						<Comments frontMatter={frontMatter} />
-						<footer>
-							<div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
-								{prev && (
-									<div className="pt-4 xl:pt-8">
-										<Link
-											href={`/blog/${prev.slug}`}
-											className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-										>
-											&larr; {prev.title}
-										</Link>
-									</div>
-								)}
-								{next && (
-									<div className="pt-4 xl:pt-8">
-										<Link
-											href={`/blog/${next.slug}`}
-											className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-										>
-											{next.title} &rarr;
-										</Link>
-									</div>
-								)}
-							</div>
-						</footer>
 					</div>
 				</div>
 			</article>
