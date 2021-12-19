@@ -20,7 +20,7 @@ const ScrollTop = () => {
 	};
 
 	const handleScrollToComment = () => {
-		document.getElementById("comment").scrollIntoView();
+		document.getElementsByClassName("giscus").item(0).scrollIntoView();
 	};
 
 	return (

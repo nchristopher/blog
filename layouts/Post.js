@@ -2,7 +2,8 @@ import PageTitle from "@/components/PageTitle";
 import SectionContainer from "@/components/SectionContainer";
 import { BlogSEO } from "@/components/SEO";
 import metadata from "@/data/metadata";
-import Comments from "@/components/comments";
+import { Giscus } from "@giscus/react";
+import { theme } from "next-themes";
 import formatDate from "@/lib/utils/formatDate";
 import ScrollTop from "@/components/ScrollTop";
 
@@ -43,7 +44,22 @@ export default function PostLayout({ frontMatter, children }) {
 								{children}
 							</div>
 						</div>
-						<Comments frontMatter={frontMatter} />
+						<Giscus
+							repo={metadata.comment.giscusConfig.repo}
+							repoId={metadata.comment.giscusConfig.repositoryId}
+							category={metadata.comment.giscusConfig.category}
+							categoryId={
+								metadata.comment.giscusConfig.categoryId
+							}
+							mapping={frontMatter.slug}
+							reactionsEnabled={
+								metadata.comment.giscusConfig.reactions
+							}
+							emitMetadata={
+								metadata.comment.giscusConfig.metadata
+							}
+							theme={theme}
+						/>
 					</div>
 				</div>
 			</article>

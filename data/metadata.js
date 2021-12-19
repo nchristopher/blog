@@ -32,9 +32,7 @@ const metadata = {
 			theme: "preferred_color_scheme",
 			// theme when dark mode
 			darkTheme: "dark",
-			// If the theme option above is set to 'custom`
-			// please provide a link below to your custom theme css file.
-			// example: https://giscus.app/themes/custom_example.css
+			// If the theme is set to custom
 			themeURL: "",
 		},
 	},
