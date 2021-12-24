@@ -10,7 +10,7 @@ class MyDocument extends Document {
 						href="/feed.xml"
 					/>
 				</Head>
-				<body className="antialiased text-black bg-white dark:bg-neutral-900 dark:text-white">
+				<body className="antialiased text-black bg-white dark:bg-zinc-900 dark:text-white">
 					<Main />
 					<NextScript />
 				</body>
