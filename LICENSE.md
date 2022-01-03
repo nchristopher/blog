@@ -1,9 +1,3 @@
-# [nchristopher.me](https://nchristopher.me)
-
-This is my personal site & blog, built with Next.js, Tailwind CSS, and MDX. It's a fork of [timlrx/tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog).
-
-## 📜 License
-
 The contents of the blog itself (files under `/data/blog/`) are licensed under the [Creative Commons BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/), and the underlying source code used to format and display that content is licensed under the MIT license:
 
     Copyright (c) 2021 Timothy Lin
