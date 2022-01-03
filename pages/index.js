@@ -1,6 +1,5 @@
 import Link from "@/components/Link";
 import { SEO } from "@/components/SEO";
-import Tag from "@/components/Tag";
 import NewsletterForm from "@/components/NewsletterForm";
 import metadata from "@/data/metadata";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
@@ -32,12 +31,11 @@ export default function Home({ posts }) {
 				<ul>
 					{!posts.length && "No posts found."}
 					{posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-						const { slug, date, title, summary, tags } =
-							frontMatter;
+						const { slug, date, title, summary } = frontMatter;
 						return (
 							<li key={slug} className="py-12">
 								<article>
-									<div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+									<div className="space-y-2">
 										<dl>
 											<dt className="sr-only">
 												Published on
@@ -59,14 +57,6 @@ export default function Home({ posts }) {
 															{title}
 														</Link>
 													</h2>
-													<div className="flex flex-wrap">
-														{tags.map((tag) => (
-															<Tag
-																key={tag}
-																text={tag}
-															/>
-														))}
-													</div>
 												</div>
 												<div className="prose text-gray-500 max-w-none dark:text-gray-400">
 													{summary}
