@@ -24,22 +24,16 @@ export default function Home({ posts }) {
 						Hello, I&#39;m Nick!
 					</h1>
 					<p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-						I&#39;m an intermediate JavaScript developer, currently
-						working on my Discord bot, Quoter. I&#39;m a big fan of
-						privacy &amp; open-source software, so most of my
-						projects reflect that!
+						I make computer programs, mostly in JavaScript. I&apos;m
+						a big of free &amp; open-source software, so most of my{" "}
+						<Link href="/projects">projects</Link> reflect that.
 					</p>
 				</div>
-				<ul className="divide-y divide-gray-200 dark:divide-gray-700">
+				<ul>
 					{!posts.length && "No posts found."}
 					{posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-						const {
-							slug,
-							date,
-							title,
-							summary,
-							tags,
-						} = frontMatter;
+						const { slug, date, title, summary, tags } =
+							frontMatter;
 						return (
 							<li key={slug} className="py-12">
 								<article>
