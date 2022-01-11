@@ -24,8 +24,8 @@ export default function Home({ posts }) {
 					</h1>
 					<p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
 						I make computer programs, mostly in JavaScript. I&apos;m
-						a big of free &amp; open-source software, so most of my{" "}
-						<Link href="/projects">projects</Link> reflect that.
+						a big fan of free &amp; open-source software, so most of
+						my <Link href="/projects">projects</Link> reflect that.
 					</p>
 				</div>
 				<ul>
