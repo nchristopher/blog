@@ -15,6 +15,14 @@ const projectsData = [
 		href: "https://github.com/nchristopher/blog",
 		link: "Source code",
 	},
+	{
+		title: "AutoPublisher",
+		description:
+			"Auto-publish Discord messages sent in announcement channels.",
+		imgSrc: "/static/images/autopublisher.png",
+		href: "https://github.com/nchristopher/autopublisher/",
+		link: "Source code",
+	},
 ];
 
 export default projectsData;
