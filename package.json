@@ -9,7 +9,8 @@
 		"serve": "next start",
 		"analyze": "cross-env ANALYZE=true next build",
 		"lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"compose": "node ./scripts/compose.js"
 	},
 	"dependencies": {
 		"@giscus/react": "1.0.1",

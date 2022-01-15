@@ -43,12 +43,6 @@ inquirer
 			type: "input",
 		},
 		{
-			name: "extension",
-			message: "Choose post extension:",
-			type: "list",
-			choices: ["mdx", "md"],
-		},
-		{
 			name: "summary",
 			message: "Enter post summary:",
 			type: "input",
@@ -80,9 +74,7 @@ inquirer
 			.replace(/ /g, "-")
 			.replace(/-+/g, "-");
 		const frontMatter = genFrontMatter(answers);
-		const filePath = `data/blog/${fileName ? fileName : "untitled"}.${
-			answers.extension ? answers.extension : "md"
-		}`;
+		const filePath = `data/blog/${fileName ? fileName : "untitled"}.mdx`;
 		fs.writeFile(filePath, frontMatter, { flag: "wx" }, (err) => {
 			if (err) {
 				throw err;
