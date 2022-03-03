@@ -16,7 +16,7 @@
 		"@giscus/react": "1.1.2",
 		"@tailwindcss/typography": "0.5.2",
 		"autoprefixer": "10.4.2",
-		"esbuild": "0.14.23",
+		"esbuild": "0.14.24",
 		"github-slugger": "1.4.0",
 		"gray-matter": "4.0.3",
 		"image-size": "1.0.1",
