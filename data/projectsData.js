@@ -24,6 +24,13 @@ const projectsData = [
 		link: "Website",
 	},
 	{
+		title: "Steam Deck Emulation Guide",
+		description: "A guide for playing emulated games on Steam Deck",
+		imgSrc: "/static/images/steam-deck.jpg",
+		href: "https://github.com/nchristopher/steamdeck-emulation",
+		link: "Read the guide",
+	},
+	{
 		title: "AutoPublisher",
 		description:
 			"Auto-publish Discord messages sent in announcement channels.",
