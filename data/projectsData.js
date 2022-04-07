@@ -16,6 +16,14 @@ const projectsData = [
 		link: "Source code",
 	},
 	{
+		title: "Needle",
+		description:
+			"I helped to add Docker support and slowmode to Needle, a a Discord bot that helps to declutter your server by creating threads automatically.",
+		imgSrc: "/static/images/needle.jpg",
+		href: "https://needle.gg",
+		link: "Website",
+	},
+	{
 		title: "AutoPublisher",
 		description:
 			"Auto-publish Discord messages sent in announcement channels.",
