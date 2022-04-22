@@ -2,7 +2,7 @@ import PageTitle from "@/components/PageTitle";
 import SectionContainer from "@/components/SectionContainer";
 import { BlogSEO } from "@/components/SEO";
 import metadata from "@/data/metadata";
-import { Giscus } from "@giscus/react";
+import Giscus from "@giscus/react";
 import { useTheme } from "next-themes";
 import formatDate from "@/lib/utils/formatDate";
 import ScrollTop from "@/components/ScrollTop";
