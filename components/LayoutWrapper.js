@@ -13,7 +13,7 @@ const LayoutWrapper = ({ children }) => {
 					<div>
 						<Link href="/">
 							<div className="flex items-center justify-between">
-								<div className="h-6 text-xl sm:text-2xl font-semibold">
+								<div className="h-6 text-xl sm:text-2xl font-semibold hover:text-gray-700 dark:hover:text-gray-400">
 									Nicholas Christopher
 								</div>
 							</div>
@@ -25,7 +25,7 @@ const LayoutWrapper = ({ children }) => {
 								<Link
 									key={link.title}
 									href={link.href}
-									className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+									className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-400"
 								>
 									{link.title}
 								</Link>
