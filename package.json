@@ -13,7 +13,7 @@
 		"compose": "node ./scripts/compose.js"
 	},
 	"dependencies": {
-		"@giscus/react": "2.0.3",
+		"@giscus/react": "2.0.4",
 		"@tailwindcss/typography": "0.5.2",
 		"autoprefixer": "10.4.7",
 		"esbuild": "0.14.39",
