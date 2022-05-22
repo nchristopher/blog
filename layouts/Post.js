@@ -11,6 +11,8 @@ export default function PostLayout({ frontMatter, children }) {
 	const { date, title } = frontMatter;
 	const { systemTheme } = useTheme();
 
+	const theme = systemTheme === "dark" ? "transparent_dark" : "light";
+
 	return (
 		<SectionContainer>
 			<BlogSEO
@@ -59,7 +61,7 @@ export default function PostLayout({ frontMatter, children }) {
 							emitMetadata={
 								metadata.comment.giscusConfig.metadata
 							}
-							theme={systemTheme}
+							theme={theme}
 						/>
 					</div>
 				</div>
