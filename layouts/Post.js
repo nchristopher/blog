@@ -9,9 +9,9 @@ import ScrollTop from "@/components/ScrollTop";
 
 export default function PostLayout({ frontMatter, children }) {
 	const { date, title } = frontMatter;
-	const { systemTheme } = useTheme();
+	const { resolvedTheme } = useTheme();
 
-	const theme = systemTheme === "dark" ? "transparent_dark" : "light";
+	const theme = resolvedTheme === "dark" ? "transparent_dark" : "light";
 
 	return (
 		<SectionContainer>
