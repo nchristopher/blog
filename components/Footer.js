@@ -17,12 +17,6 @@ export default function Footer() {
 						href={`mailto:${metadata.email}`}
 						size="6"
 					/>
-					<SocialIcon
-						kind="youtube"
-						href={metadata.youtube}
-						size="6"
-					/>
-					<SocialIcon kind="steam" href={metadata.steam} size="6" />
 				</div>
 			</div>
 		</footer>
