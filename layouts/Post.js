@@ -9,7 +9,9 @@ import ScrollTop from "@/components/ScrollTop";
 
 export default function PostLayout({ frontMatter, children }) {
 	const { date, title } = frontMatter;
-	const { systemTheme } = useTheme();
+	const { resolvedTheme } = useTheme();
+
+	const theme = resolvedTheme === "dark" ? "transparent_dark" : "light";
 
 	return (
 		<SectionContainer>
@@ -59,7 +61,7 @@ export default function PostLayout({ frontMatter, children }) {
 							emitMetadata={
 								metadata.comment.giscusConfig.metadata
 							}
-							theme={systemTheme}
+							theme={theme}
 						/>
 					</div>
 				</div>
