@@ -13,10 +13,10 @@
 		"compose": "node ./scripts/compose.js"
 	},
 	"dependencies": {
-		"@giscus/react": "2.0.5",
+		"@giscus/react": "2.0.6",
 		"@tailwindcss/typography": "0.5.2",
 		"autoprefixer": "10.4.7",
-		"esbuild": "0.14.43",
+		"esbuild": "0.14.47",
 		"github-slugger": "1.4.0",
 		"gray-matter": "4.0.3",
 		"image-size": "1.0.1",
